@@ -44,12 +44,9 @@ namespace yestatambien
             while (true) {
                 if (mit.ConectaPLC("192.168.1.100","5000")) {
                     string lectura = mit.LeePLC(PLC_Mitsubishi.TipoDato.Float, "D200", 0);
-                    Console.WriteLine($"PLC {i}:\t{lectura}");
-                
+                    Console.WriteLine($"PLC {mit.GetHashCode()}:\t{lectura}");
                 }
-
             }
-
         }
     }
 }
